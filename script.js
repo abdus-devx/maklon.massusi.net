@@ -30,3 +30,9 @@ tabs.forEach(tab => {
     });
 
 });
+
+lucide.createIcons({
+    attrs: {
+      "stroke-width": 1.25
+    }
+  });

@@ -585,7 +585,6 @@ VARIAN PRODUK */
     display:flex;
     align-items:center;
     justify-content:center;
-
     padding:60px;
 
 }
@@ -673,7 +672,6 @@ VARIAN PRODUK */
     padding:16px 28px;
     border-radius:100px;
     text-decoration:none;
-
     color:white;
     background:var(--lpm-primary);
     transition:.3s;
@@ -690,23 +688,16 @@ VARIAN PRODUK */
 /* RESPONSIVE */
 
 @media(max-width:992px){
-
 .lpm-varian-box{
-
 grid-template-columns:1fr;
-
 }
 
 .lpm-varian-content{
-
 padding:40px;
-
 }
 
 .lpm-varian-image{
-
 padding:40px;
-
 }
 
 }
@@ -869,14 +860,14 @@ display:none;
     transition:.35s;
 }
 
-.lpm-circle i{
-    font-size:42px;
+.lpm-circle svg{
+    width:2.6rem;
+    height:2.6rem;
     color:var(--lpm-primary);
-    transition:.35s;
-    line-height:1;
+    transition:color .35s ease;
 }
 
-.lpm-item:hover .lpm-circle i{
+.lpm-item:hover .lpm-circle svg{
     color:#fff;
 }
 
