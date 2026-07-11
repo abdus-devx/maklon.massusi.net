@@ -481,7 +481,7 @@ VARIAN PRODUK */
 
 .lpm-varian{
     padding:100px 0;
-    
+    background:var(--lpm-bg);
     overflow:hidden;
 }
 
