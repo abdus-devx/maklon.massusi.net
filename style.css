@@ -163,7 +163,7 @@ HEADER */
 HERO */
 
 .lpm-hero {
-    padding: 80px 20px;
+    padding: 30px 20px;
 }
 
 .lpm-container {
@@ -335,6 +335,12 @@ HERO */
 
 /* ========
 TRUST */
+.trust {
+background:var(--lpm-bg);
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
 .lpm-hero-trust {
     max-width: 1280px;
@@ -344,6 +350,7 @@ TRUST */
     grid-template-columns: repeat(4, 220px);
     gap: 20px;
     justify-content: center;
+    
 }
 
 .lpm-trust-item {
