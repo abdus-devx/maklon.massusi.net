@@ -10,7 +10,7 @@
     --radius: 32px;
     --shadow:
         0 20px 60px rgba(0, 0, 0, .08);
-    --font-primary: "Poppins", sans-serif;
+    --font-primary: "Poppins",  sans-serif;
 }
 html{
     scroll-behavior: smooth;
@@ -18,7 +18,7 @@ html{
 
 body{
     font-family: var(--font-primary);
-    transition: all .4s cubic-bezier(.4,0,.2,1);
+    
 }
 /* ========
 HEADER */
@@ -163,22 +163,23 @@ HEADER */
 HERO */
 
 .lpm-hero {
-    padding: 30px 20px;
+    padding: 50px 20px;
 }
 
 .lpm-container {
-    max-width: 1280px;
+    width: 100%;
     margin: auto;
 }
 
 .lpm-hero-content {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
-    gap: 60px;
+    gap: 80px;
     background: #fff;
     border-radius: 40px;
     padding: 70px;
-    
+    max-width: 1360px;
+    margin: auto;
     position: relative;
     overflow: hidden;
 }
@@ -186,12 +187,12 @@ HERO */
 .lpm-hero-content::after {
     content: "";
     position: absolute;
-    width: 380px;
-    height: 380px;
+    width: 200px;
+    height: 200px;
     background: #EAF8F1;
     border-radius: 50%;
-    top: -150px;
-    right: -150px;
+    top: 25px;
+    right: 25px;
 }
 
 .lpm-hero-text {
@@ -214,6 +215,7 @@ HERO */
     line-height: 1.1;
     color: var(--lpm-text);
     margin-bottom: 25px;
+    font-weight: 700;
 }
 
 .lpm-hero h1 span {
@@ -258,7 +260,7 @@ HERO */
 
 .lpm-hero-list i {
     color: var(--lpm-primary);
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .lpm-hero-button {
@@ -305,6 +307,23 @@ HERO */
 .lpm-btn-outline:hover {
     background: var(--lpm-primary);
     color: #fff !important;
+}
+.lpm-btn-outline svg {
+    animation: arrowFloat 2s ease-in-out infinite;
+}
+
+@keyframes arrowFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .lpm-hero-image {
@@ -393,7 +412,9 @@ justify-content:center;
         padding: 45px;
         gap: 50px;
     }
-
+    .lpm-hero-content::after {
+        display: none;
+    }
     .lpm-hero-image {
         order: -1;
     }
