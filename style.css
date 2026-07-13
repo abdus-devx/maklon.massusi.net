@@ -194,43 +194,44 @@ HERO */
 TRUST */
 
 .lpm-hero-trust {
-    margin-top: 40px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 40px auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 220px);
     gap: 20px;
     justify-content: center;
 }
 
 .lpm-trust-item {
     background: #fff;
-    border-radius: 24px;
-    padding: 28px 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    padding: 20px;
     text-align: center;
     border: 1px solid var(--lpm-border);
     transition: .35s;
-}
-
-.lpm-trust-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, .08);
-}
-
-.lpm-trust-item img {
-    margin-bottom: 15px;
-    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .lpm-trust-item h3 {
     color: var(--lpm-primary);
-    font-size: 36px;
-    margin: 12px auto;
+    font-size: 34px;
+    margin: 8px auto;
 }
 
 .lpm-trust-item p {
     color: var(--lpm-text-light);
     margin: 0;
 }
-
+.lpm-icon {
+    margin: 8px auto;
+}
 /* ==========================
    TABLET
 ========================== */
@@ -862,7 +863,8 @@ display:none;
     transition:.35s;
 }
 
-.lpm-circle svg{
+.lpm-circle svg,
+.lpm-icon svg{
     width:2.6rem;
     height:2.6rem;
     color:var(--lpm-primary);
