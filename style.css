@@ -366,7 +366,7 @@ justify-content:center;
     width: 100%;
     margin: 40px auto;
     display: grid;
-    grid-template-columns: repeat(4, 220px);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 220px));
     gap: 20px;
     justify-content: center;
     
@@ -377,7 +377,7 @@ justify-content:center;
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin-top: 30px;
+    margin:0 auto;
     padding: 20px;
     text-align: center;
     border: 1px solid var(--lpm-border);
@@ -477,6 +477,8 @@ justify-content:center;
 
     .lpm-hero-trust {
         grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
     }
 }
 
