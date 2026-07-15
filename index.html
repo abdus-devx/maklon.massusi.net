@@ -29,18 +29,25 @@
 <body>
   <header class="lpm-header">
     <nav class="navbar navbar-expand-lg">
-      <div class="container">
+      <div class="container lpm-nav-container">
+
+        <!-- Logo -->
         <a class="navbar-brand" href="#">
           <img
             src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFsep5gqkXR8dbqaoQwbagcWvIFbQiBLqXfBUmcVKmdjRg42RRZq6JPjASdxz43VoJLyIa4kFxyWQmpgSoTo2qgi-4cp-NUNjqSUsy6JuJsMXy8r4glaCgQPYAxKiPa4bFxPt_ehkQUNEAIlQ5SW1nGDTjYRGYClgjECwgULzmHG0nu374mL2SegN9/s640/logoweb_11zon.webp"
-            alt="Massusi Herbal" />
+            alt="Massusi Herbal">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Menu -->
         <div class="collapse navbar-collapse" id="mainNavbar">
+
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link active" href="#hero">Home</a>
@@ -63,8 +70,12 @@
             </li>
           </ul>
 
-          <a href="#" class="lpm-btn-nav"> Konsultasi Gratis </a>
+          <a href="#" class="lpm-btn-nav">
+            Konsultasi Gratis
+          </a>
+
         </div>
+
       </div>
     </nav>
   </header>

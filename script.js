@@ -1,32 +1,51 @@
+// =======================================
+// ELEMENT
+// =======================================
+
+const header = document.querySelector(".lpm-header");
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
-window.addEventListener("scroll", () => {
+// =======================================
+// SCROLL EFFECT
+// =======================================
 
+function handleScroll() {
+
+    // Header
+    header.classList.toggle("scrolled", window.scrollY > 50);
+
+    // Active Navigation
     let current = "";
 
     sections.forEach(section => {
 
         const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
 
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute("id");
+        if (window.scrollY >= sectionTop) {
+            current = section.id;
         }
 
     });
 
     navLinks.forEach(link => {
 
-        link.classList.remove("active");
-
-        if(link.getAttribute("href") === "#" + current){
-            link.classList.add("active");
-        }
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + current
+        );
 
     });
 
+}
+
+window.addEventListener("scroll", handleScroll, {
+    passive: true
 });
+
+// Jalankan sekali saat halaman selesai dimuat
+handleScroll();
+
 
 // =======================================
 // TAB VARIAN PRODUK
@@ -39,40 +58,26 @@ tabs.forEach(tab => {
 
     tab.addEventListener("click", () => {
 
-        // hapus active semua tombol
         tabs.forEach(btn => btn.classList.remove("active"));
+        panels.forEach(panel => panel.classList.remove("active"));
 
-        // aktifkan tombol yg dipilih
         tab.classList.add("active");
 
-        // sembunyikan semua panel
-        panels.forEach(panel => {
-            panel.classList.remove("active");
-        });
-
-        // tampilkan panel sesuai data-tab
-        const target = document.getElementById(tab.dataset.tab);
-
-        if(target){
-            target.classList.add("active");
-        }
+        document
+            .getElementById(tab.dataset.tab)
+            ?.classList.add("active");
 
     });
 
 });
 
-const header = document.querySelector(".lpm-header");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-});
+// =======================================
+// LUCIDE ICON
+// =======================================
 
 lucide.createIcons({
     attrs: {
-      "stroke-width": 1.25
+        "stroke-width": 1.25
     }
-  });
+});
