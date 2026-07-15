@@ -726,13 +726,17 @@ MOBILE
 
 /* ========
 TESTIMONIALS */
-
-
 .tsm-section {
+    margin-inline: auto;
+    padding: 20px clamp(16px, 4vw, 32px);
+    background: var(--lpm-bg);
+}
+.container {
     max-width: 1280px;
     margin-inline: auto;
     padding: 100px clamp(16px, 4vw, 32px);
 }
+
 
 .tsm-heading {
     text-align: center;
