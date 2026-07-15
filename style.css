@@ -625,9 +625,10 @@ LEFT
 .target-list svg {
     width: 24px;
     height: 24px;
-    color: var(--lpm-primary);
+    color: var(--lpm-primary-dark);
     flex-shrink: 0;
     margin-top: 3px;
+    stroke-width: 2;
 }
 .target-list:hover {
     box-shadow: 0 20px 60px rgba(46, 139, 87, .15);
@@ -1235,10 +1236,12 @@ VARIAN PRODUK */
     }
 
 }
+/* =====
+ALUR */
 
 .lpm-process {
     padding: 100px 40px;
-
+    background: var(--lpm-white);
 }
 
 .lpm-section-title {
@@ -1399,24 +1402,149 @@ VARIAN PRODUK */
     }
 
     .lpm-line {
-
         display: none;
     }
 
 }
 
 @media(max-width:768px) {
-
     .lpm-timeline {
-
         grid-template-columns: 1fr;
     }
 
     .lpm-item {
-
         max-width: 320px;
-
         margin: auto;
     }
+}
 
+/*==========================================
+WHY US
+===========================================*/
+
+.why-us{
+    padding:100px 20px;
+
+    background:
+    radial-gradient(circle at 15% 15%, rgba(46,139,87,.08), transparent 30%),
+    radial-gradient(circle at 85% 85%, rgba(201,162,39,.10), transparent 30%),
+    linear-gradient(180deg,#ffffff,#f6faf7,#edf7f0);
+}
+
+.why-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    margin:60px auto;
+    max-width: 1400px;
+
+}
+
+.why-card{
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #fcfefc 55%,
+            #eef8f1 100%
+        );
+
+    border:1px solid rgba(46,139,87,.10);
+    border-radius:28px;
+    padding:36px;
+
+    box-shadow:
+        0 12px 30px rgba(46,139,87,.06),
+        0 2px 8px rgba(0,0,0,.04);
+
+    transition:.35s;
+    overflow:hidden;
+    position:relative;
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+    border-color:rgba(46,139,87,.25);
+
+}
+
+.why-icon{
+    width:68px;
+    height:68px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:18px;
+    background:rgba(46,139,87,.08);
+    margin-bottom:24px;
+}
+
+.why-icon svg{
+    width:34px;
+    height:34px;
+    color:var(--lpm-primary);
+    stroke-width:1.5;
+}
+
+.why-card h3{
+    font-size:1.25rem;
+    margin-bottom:14px;
+    color:var(--lpm-text);
+}
+
+.why-card p{
+    color:var(--lpm-text-light);
+    line-height:1.8;
+}
+
+/*========================
+TABLET
+========================*/
+
+@media(max-width:992px){
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .why-us {
+        padding: 90px 20px;
+    }
+}
+
+/*========================
+MOBILE
+========================*/
+
+@media(max-width:768px){
+
+    .why-us{
+        padding:80px 20px;;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+        margin-top:40px;
+    }
+
+    .why-card{
+        padding:28px;
+    }
+
+    .why-icon{
+        width:58px;
+        height:58px;
+    }
+
+    .why-icon i{
+        width:28px;
+        height:28px;
+    }
+
+    .why-card h3{
+        font-size:1.1rem;
+    }
 }
