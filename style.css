@@ -177,6 +177,9 @@ body {
     min-height: 72px;
   }
 
+  .lpm-nav-container {
+    padding: 0 40px;
+  }
   .navbar-collapse {
     margin-top: 16px;
     padding: 24px;
