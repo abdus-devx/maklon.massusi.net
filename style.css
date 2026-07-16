@@ -1240,7 +1240,7 @@ VARIAN PRODUK */
 ALUR */
 
 .lpm-process {
-    padding: 100px 40px;
+    padding: 100px 60px;
     background: var(--lpm-white);
 }
 
@@ -1318,7 +1318,7 @@ ALUR */
 
     background: var(--lpm-white);
 
-    border: 2px solid var(--lpm-border);
+    border: 2px solid var(--lpm-primary);
 
     display: flex;
     align-items: center;
@@ -1547,4 +1547,142 @@ MOBILE
     .why-card h3{
         font-size:1.1rem;
     }
+}
+
+/*==========================================
+FAQ
+===========================================*/
+
+.faq{
+
+    padding:100px 0;
+    background:var(--lpm-primary-dark);
+
+}
+
+.faq-wrapper{
+
+    max-width:1280px;
+    margin:60px auto 0;
+
+}
+
+.faq-item{
+
+    background:#fff;
+    border:1px solid var(--lpm-border);
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:18px;
+    transition:.35s;
+
+}
+
+.faq-item.active{
+
+    border-color:rgba(46,139,87,.25);
+    box-shadow:0 15px 40px rgba(0,0,0,.05);
+
+}
+.lpm-section-title.text-color .white {
+    color: #fff;
+    background: rgba(150, 241, 190, 0.1);
+}
+.faq-question{
+
+    width:100%;
+    border:none;
+    background:none;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:24px 28px;
+
+    text-align:left;
+
+}
+
+.faq-question span{
+
+    font-size:1.05rem;
+    font-weight:600;
+    color:var(--lpm-text);
+
+}
+
+.faq-question i{
+
+    width:22px;
+    height:22px;
+
+    color:var(--lpm-primary);
+
+    transition:.35s;
+
+}
+
+.faq-item.active i{
+
+    transform:rotate(45deg);
+
+}
+
+.faq-answer{
+
+    max-height:0;
+    overflow:hidden;
+
+    transition:max-height .45s ease;
+
+}
+
+.faq-answer p{
+
+    padding:0 28px 28px;
+
+    color:var(--lpm-text-light);
+
+    line-height:1.8;
+
+}
+
+/*========================
+TABLET
+========================*/
+
+@media(max-width:768px){
+
+.faq{
+
+    padding:80px 0;
+
+}
+
+.faq-wrapper{
+
+    margin-top:40px;
+
+}
+
+.faq-question{
+
+    padding:20px;
+
+}
+
+.faq-answer p{
+
+    padding:0 20px 20px;
+
+}
+
+.faq-question span{
+
+    font-size:1rem;
+
+}
+
 }
